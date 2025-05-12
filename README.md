@@ -26,7 +26,8 @@ Des comptes de test sont disponibles pour se connecter :
 
 1. Clonez ce dépôt sur votre machine locale :
    ```bash
-
+   git clone https://github.com/subarupnh/voiture-auto.git
+   cd MonProjetLAMP
    ```
 2. Configurez votre environnement LAMP (Linux, Apache, MySQL, PHP).
 3. Importez le fichier SQL dans votre base de données MySQL :
@@ -35,11 +36,31 @@ Des comptes de test sont disponibles pour se connecter :
    ```
 4. Configurez les informations de connexion à la base de données dans le fichier `config.php` :
    ```php
-   define('DB_HOST', 'votre_hôte');
-   define('DB_NAME', 'votre_nom_de_base');
-   define('DB_USER', 'votre_utilisateur');
-   define('DB_PASS', 'votre_mot_de_passe');
+   define('DB_HOST', 'db');        // Nom du service Docker pour la base de données
+   define('DB_NAME', 'login_system');
+   define('DB_USER', 'root');
+   define('DB_PASS', 'root');
    ```
-5. Lancez le projet dans votre navigateur en accédant à `http://localhost/MonProjetLAMP`.
+
+5. Démarrez l'environnement Docker :
+   ```bash
+   docker-compose up -d
+   ```
+
+6. Accédez au projet :
+   - Site web : `http://localhost/MonProjetLAMP`
+   - PHPMyAdmin : `http://localhost:1200`
+     - Utilisateur : root
+     - Mot de passe : root
+
+7. Vérifiez que :
+   - Les services Docker sont en cours d'exécution
+   - La base de données est accessible via PHPMyAdmin
+   - Le site web s'affiche correctement dans votre navigateur
+
+En cas de problème :
+- Vérifiez les logs Docker : `docker-compose logs`
+- Assurez-vous que les ports 80 et 1200 sont disponibles
+- Vérifiez les permissions des dossiers du projet
 
 
