@@ -7,6 +7,7 @@ Bienvenue sur le projet **SIO - Gestion des Voitures**. Ce site web permet de g�
 Le site propose :
 - Une interface utilisateur moderne et responsive grâce à Bootstrap.
 - La gestion des voitures avec ajout, modification, suppression et affichage des descriptions et images.
+- **La description de chaque voiture s'affiche correctement sur la page de détails ou dans la liste des voitures, selon la configuration de l'application.**
 - Un système de recherche pour trouver des voitures par marque ou modèle.
 - Une gestion des utilisateurs avec des rôles (utilisateur ou administrateur).
 - Une pagination dynamique pour naviguer entre les pages de contenu.
