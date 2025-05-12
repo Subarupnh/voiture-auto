@@ -9,9 +9,10 @@ services:
       - db_data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: login_system
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
+      TZ: Europe/Paris # Added timezone for consistency
 
   web:
     build: .
@@ -26,8 +27,8 @@ services:
     environment:
       MYSQL_DB_HOST: db
       MYSQL_DATABASE: login_system
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.2
@@ -40,9 +41,9 @@ services:
     links:
       - db:db
     environment:
-      - PMA_HOST=db
-      - PMA_USER=root
-      - PMA_PASSWORD=root
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
 
 volumes:
   db_data:
