@@ -25,7 +25,7 @@ Des comptes de test sont disponibles pour se connecter :
 
 1. Clonez ce dépôt sur votre machine locale :
    ```bash
-   git clone https://github.com/votre-utilisateur/projetsio.git
+
    ```
 2. Configurez votre environnement LAMP (Linux, Apache, MySQL, PHP).
 3. Importez le fichier SQL dans votre base de données MySQL :
@@ -41,6 +41,4 @@ Des comptes de test sont disponibles pour se connecter :
    ```
 5. Lancez le projet dans votre navigateur en accédant à `http://localhost/MonProjetLAMP`.
 
-## Licence
 
-Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
