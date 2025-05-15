@@ -1,0 +1,7 @@
+git init
+
+/vendor
+.env
+*.log
+.DS_Store
+/config.php
