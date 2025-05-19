@@ -1,0 +1,552 @@
+/* style.css */
+
+/* Variables CSS (Thème Noir et Bleu) */
+:root {
+    --primary-color: #64b5f6;
+    --secondary-color: #1e88e5;
+    --accent-color: #0277bd;
+    --text-color: #ffffff;
+    --bg-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --border-color: #333333;
+    --border-radius: 1rem;
+    --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    --transition-speed: 0.3s;
+    --background-image: url("background.jpg");
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    padding: 1rem 0;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: var(--text-color) !important;
+    transition: color var(--transition-speed);
+    padding: 0.75rem 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.15);
+    border: 2px solid var(--primary-color);
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.search-bar .form-control {
+    border-radius: 2rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: #222;
+    color: var(--text-color);
+    transition: box-shadow var(--transition-speed);
+}
+
+.search-bar .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25);
+    background-color: #333;
+}
+
+.search-bar .btn {
+    border-radius: 2rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.search-bar .btn:hover {
+    background-color: #42a5f5;
+    border-color: #42a5f5;
+    transform: scale(1.05);
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.2);
+    margin-bottom: 2rem;
+    border: 2px solid var(--primary-color);
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    font-size: 1.75rem;
+}
+
+.form-container .form-label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-container .form-control,
+.form-container .form-select {
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: rgba(20, 20, 20, 0.9);
+    color: var(--text-color);
+}
+
+.form-container .form-control:focus,
+.form-container .form-select:focus {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(100, 181, 246, 0.25);
+}
+
+.form-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.form-container .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Voiture Item */
+.voiture-item {
+    margin-bottom: 2rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    height: 100%; /* Assure une hauteur égale pour toutes les cartes */
+}
+
+.voiture-item:hover {
+    transform: translateY(-5px) rotate(2deg);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.voiture-item img {
+    height: 200px; /* Hauteur réduite pour mieux s'adapter à deux colonnes */
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
+    width: 100%;
+}
+
+.voiture-item .card {
+    background-color: rgba(30, 30, 30, 0.95);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.2);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: box-shadow var(--transition-speed);
+}
+
+.voiture-item .card:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.voiture-item .card-body {
+    padding: 1.5rem;
+}
+
+.voiture-item .card-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.voiture-item .card-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: help;
+}
+
+/* Table */
+.table {
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.table thead th {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.table tbody td {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+/* Table avec défilement */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+.table-container thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+}
+
+/* Styliser la barre de défilement */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Table des utilisateurs avec défilement */
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+.table-container table {
+    margin-bottom: 0;
+}
+
+.table-container thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+}
+
+.table-container tbody tr:hover {
+    background-color: rgba(100, 181, 246, 0.1);
+}
+
+/* Styliser la barre de défilement pour les utilisateurs */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Pagination */
+.pagination .page-link {
+    color: var(--primary-color);
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.pagination .page-link:hover {
+    background-color: #333;
+    color: var(--accent-color);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.7s ease forwards;
+}
+
+/* Bouton "Description" */
+.btn-accent {
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    border: none;
+    color: var(--text-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(100, 181, 246, 0.2);
+}
+
+.btn-accent:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .voiture-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .voiture-item img {
+        height: 180px;
+    }
+    
+    /* Force l'affichage en une colonne sur mobile */
+    .col-md-6 {
+        width: 100%;
+    }
+}
+
+/* Fenêtre Modale (CSS-only - Version 2) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden; /* Cacher initialement */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    overflow: auto; /* Ajout de overflow: auto */
+}
+
+/* Styles additionnels pour améliorer l'apparence */
+.voiture-item .card-body .btn {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Style pour la description */
+.description-text {
+    color: #e0e0e0; /* Couleur plus douce pour le texte */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/* Suppression des styles potentiellement problématiques */
+/* Aucun style JavaScript n'est présent ici, mais nous nous assurons que la description s'affiche correctement */
+
+.description-text {
+    display: block; /* S'assurer que l'élément est visible */
+    visibility: visible; /* Rendre l'élément visible */
+    opacity: 1; /* Pleine opacité pour éviter qu'il soit masqué */
+}
+
+/* Style amélioré pour la description */
+.description-container {
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.2);
+}
+
+.description-header {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.description-text {
+    color: #e0e0e0; /* Couleur plus douce pour le texte */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/* Style pour la description masquable */
+.description-hidden {
+    display: none;
+}
+
+.toggle-description {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    color: var(--text-color);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(100, 181, 246, 0.2);
+}
+
+.toggle-description:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+}
+
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid var(--primary-color);
+}
+
+.alert-info {
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.2);
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25);
+}
+
+/* Style uniforme pour tous les boutons */
+.btn, .toggle-description, .btn-accent, .btn-primary {
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    color: var(--text-color);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(100, 181, 246, 0.2);
+}
+
+.btn:hover, .toggle-description:hover, .btn-accent:hover, .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+}
